@@ -1,19 +1,18 @@
 # ui-challange
-UI code challenge.
 
-## The task
-The challenge is to achieve a responsive design as per the screens present in the assets directory. The screens are provided for 3 different resolutions. There is no need for implementing the undelying functionality.
+Finished the task in 3 hours time.
 
-This is a helper repo to get you started with.
-Prerequisite
-[Node JS](https://nodejs.org/en/). 
-Steps:
-```
-git+https://github.com/mcmakler/ui-challange.git
-cd ui-challenge
-yarn
-yarn serve
-```
-This repo uses [parceljs](https://parceljs.org/) and contains support for [SCSS](https://sass-lang.com/)
-- You are free to use any framework/pre-processor.
-- Use icons/assets wherever required.
+I have started task with mobile-first approach and eventually build it.
+
+there are some parts which I was not able to do due to time contraint is : 
+
+- phone number should display for tablet and desktop.
+- Nested items to show in side the table for desktop.
+- exact icon for watch and download, I was not able to find due to time issue.
+
+Would love to extend the project if given chance.
+
+Let me know if any questions are there.
+
+
+
