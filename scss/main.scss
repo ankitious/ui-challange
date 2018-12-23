@@ -1,3 +1,135 @@
-p {
-    color: green;
+
+
+
+header.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid #aaaaaa;
+    padding: 15px 22px;
+
+  div.logo-container {
+    width: 140px;
+  }
+
+  div.phone-number-container {
+    -ms-flex-align: center;
+    -ms-transform: translateY(-50%);
+    -webkit-box-align: center;
+    -webkit-transform: translateY(-50%);
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 16px;
+    font-weight: 600;
+    position: absolute;
+    right: 20px;
+    top: 9%;
+    transform: translateY(-50%);
+    width: 20px;
+  }
+
+
+  svg.phone-number {
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    color: #aaa;
+    transform: rotate(90deg);
+    fill: currentColor;
+    stroke: currentColor;
+  }
 }
+
+section.houses-section {
+
+  div.section-header-container {
+    h1.section-header {
+      color: #343434;
+      text-align: center;
+    }
+
+    div.section-subheader {
+      color: dimgray;
+      text-align: center;
+      word-break: break-word;
+      width: 50%;
+      margin: 0px auto;
+    }
+  }
+
+  div.housing-list-container {
+
+    div.housing-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+      div.house-information {
+        display: flex;
+        flex-direction: column;
+        margin: 30px;
+
+        .house-image-container img.house-image {
+            width: 100%;
+        }
+
+        div.house-detail-container div  {
+          padding : 5px 0px;
+        }
+       div.house-detail-container div div:first-child {
+         color: #bababa;
+       }
+
+        div.house-detail-container div div:last-child {
+          color: #535353;
+        }
+
+      }
+
+      div.download-expose-button-container {
+        margin: 0 auto;
+
+        span.download-expose-button {
+          color: #ffffff;
+          font-weight: bold;
+          background-color: #ffbb00;
+          padding: 10px 20px;
+          display: inline-block;
+          text-align: center;
+          box-shadow: 0px 1px 2px #535353;
+        }
+      }
+    }
+
+    div.house-list-conatiner {
+
+      display: flex;
+      flex-direction: row;
+      border-top: 1px solid gray;
+      padding: 10px 20px;
+      justify-content: space-between;
+
+      div.checkbox-with-detail-container {
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+         .checkbox-wrapper {
+           margin-right: 10px;
+         }
+         .address-details-container {
+           display: flex;
+           flex-direction: column;
+         }
+
+
+       }
+
+    }
+  }
+
+
+}
+
+
+
