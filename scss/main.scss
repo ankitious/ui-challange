@@ -1,5 +1,6 @@
 
-
+$tablet: "(min-width: 768px) and (max-width: 1023px)";
+$desktop: "(min-width: 1024px)";
 
 header.header-container {
     display: flex;
@@ -25,13 +26,13 @@ header.header-container {
     font-weight: 600;
     position: absolute;
     right: 20px;
-    top: 9%;
+    top: 6%;
     transform: translateY(-50%);
     width: 20px;
   }
 
 
-  svg.phone-number {
+  svg.phone-number-icon {
     -ms-transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
     color: #aaa;
@@ -39,6 +40,7 @@ header.header-container {
     fill: currentColor;
     stroke: currentColor;
   }
+
 }
 
 section.houses-section {
@@ -49,12 +51,42 @@ section.houses-section {
       text-align: center;
     }
 
+    h1.section-header span:after {
+      content: '.';
+    }
+
+    @media #{$tablet} {
+      h1.section-header span {
+        display: block;
+      }
+      h1.section-header span:after {
+        content: 'an der von uns angebotenen Immobile.';
+      }
+    }
+
+
+    @media #{$desktop} {
+      h1.section-header span {
+        display: block;
+      }
+      h1.section-header span:after {
+        content: 'an der von uns angebotenen Immobile.';
+      }
+    }
+
     div.section-subheader {
-      color: dimgray;
+      color: #7d7d7d;
       text-align: center;
       word-break: break-word;
       width: 50%;
       margin: 0px auto;
+    }
+  }
+
+  @media #{$desktop} {
+    div.housing-list-container {
+      margin: 43px;
+      border: 1px solid lightgrey;
     }
   }
 
@@ -74,20 +106,55 @@ section.houses-section {
             width: 100%;
         }
 
+        @media #{$tablet} {
+          .house-image-container {
+            display: inline-block;
+            width: 43%;
+          }
+          .house-image-container img.house-image {
+            width: 70%;
+          }
+        }
+
+        @media #{$desktop} {
+          .house-image-container {
+            display: inline-block;
+            width: 43%;
+          }
+          .house-image-container img.house-image {
+            width: 70%;
+          }
+        }
+
         div.house-detail-container div  {
           padding : 5px 0px;
         }
        div.house-detail-container div div:first-child {
-         color: #bababa;
+         color: #7d7d7d;
+         font-weight: bold;
        }
 
         div.house-detail-container div div:last-child {
           color: #535353;
+          font-weight: bold;
         }
 
       }
 
+      @media #{$tablet} {
+      div.house-information {
+        flex-direction: row;
+       }
+      }
+
+      @media #{$desktop} {
+        div.house-information {
+          flex-direction: row;
+        }
+      }
+
       div.download-expose-button-container {
+
         margin: 0 auto;
 
         span.download-expose-button {
@@ -99,14 +166,38 @@ section.houses-section {
           text-align: center;
           box-shadow: 0px 1px 2px #535353;
         }
+
+      }
+
+
+
+      @media #{$tablet} {
+        div.download-expose-button-container {
+          margin: 10px 30px;
+        }
+
+        div.checkbox-container {
+          padding: 10px 50px;
+        }
+      }
+
+      @media #{$desktop} {
+        div.download-expose-button-container {
+          margin: 10px 30px;
+        }
+
+        div.checkbox-container {
+          padding: 10px 50px;
+        }
       }
     }
+
 
     div.house-list-conatiner {
 
       display: flex;
       flex-direction: row;
-      border-top: 1px solid gray;
+      border-top: 1px solid #e6e6e6;
       padding: 10px 20px;
       justify-content: space-between;
 
@@ -120,15 +211,88 @@ section.houses-section {
          .address-details-container {
            display: flex;
            flex-direction: column;
+
+           div:first-child {
+             font-size: 16px;
+             font-weight: bold;
+             color: #000000d1;
+           }
+           div:last-child {
+             font-size: 12px;
+             color: #535353;
+           }
+
+
+           div.long-text span:after {
+             content: '...';
+           }
+
+           @media  #{$tablet} {
+
+             div.long-text span:after {
+               content: ' Ground Plot, Entry in the land register';
+             }
+           }
+
+           @media  #{$desktop} {
+
+             div.long-text span:after {
+               content: ' Ground Plot, Entry in the land register';
+             }
+           }
+
          }
+
+        .file-type-container {
+          display: none;
+        }
+
+        @media  #{$tablet} {
+
+           .file-type-container {
+             display: block;
+             padding-right: 5px;
+           }
+        }
+
+        @media  #{$desktop} {
+
+          .file-type-container {
+            display: block;
+            padding-right: 5px;
+          }
+        }
 
 
        }
 
+      div.watch-and-download-container {
+          display: flex;
+          flex-direction: row;
+
+        div.watch , div.download {
+          padding: 0px 5px;
+        }
+      }
+
+    }
+
+    @media only screen and (min-width: 1023px) {
+      div.housing-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 20px;
+      }
     }
   }
 
 
+}
+
+div#checkbox-container {
+  padding: 10px 20px;
+  color: grey;
 }
 
 
